@@ -5,7 +5,7 @@ var bodyParser = require( 'body-parser' );
 var urlencodedParser = bodyParser.urlencoded( { extended:false } );
 var equation = require('../modules/equation.js');
 
-var server = app.listen('8080', function(){
+var server = app.listen(process.env.PORT || 8080, function(){
   console.log('8080 is listening!');
 });
 
